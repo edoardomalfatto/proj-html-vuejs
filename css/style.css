@@ -1,0 +1,76 @@
+/* FORMATTING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* UTILITIES */
+
+.nav_padding {
+    padding-left: 10px;
+}
+
+
+/* standard divs */
+
+.standard_wrapper {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* font colors */
+
+.fnt_bombaygray {
+    color: #acaeb1;
+}
+
+
+/* background colors */
+
+.bkg_outerspace {
+    background-color: #28363c;
+}
+
+
+/* EFFECTVIE CODE */
+
+
+/* HEADER */
+
+
+/* top header */
+
+#top_header {
+    height: 4vh;
+}
+
+#top_header .standard_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_header_right {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_header_right .top_header_icon_nav {
+    width: 20%;
+}
+
+.top_header_right .top_header_icon_nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.top_header_right .top_header_icon_nav ul li a {
+    color: #acaeb1;
+}
