@@ -17,6 +17,10 @@
     list-style: none;
 }
 
+.float_right {
+    float: right;
+}
+
 
 /* standard divs */
 
@@ -55,6 +59,23 @@ h1 {
     font-size: 600%;
 }
 
+h2 {
+    font-size: 350%;
+}
+
+h3 {
+    font-size: 120%;
+    padding-bottom: 20px;
+}
+
+p {
+    font-size: 120%;
+}
+
+.big_font {
+    font-size: 200%;
+}
+
 
 /* font colors */
 
@@ -71,6 +92,10 @@ h1 {
 
 .bkg_outerspace {
     background-color: #28363c;
+}
+
+.bkg_darkbunker {
+    background-color: rgb(17, 17, 23);
 }
 
 
@@ -126,7 +151,7 @@ h1 {
 /* bottom header */
 
 #bottom_header_jumbotron {
-    height: 90vh;
+    height: 100vh;
     background-image: url(../img/bg-13.jpg);
     background-position: right;
     background-repeat: no-repeat;
@@ -176,7 +201,7 @@ span.section_exp {
     text-transform: uppercase;
     font-weight: bold;
     color: #038484;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .jumbotron_buttons {
@@ -185,4 +210,73 @@ span.section_exp {
 
 .jumbotron_buttons #green_btn {
     margin-right: 20px;
+}
+
+
+/* Seconda sezione - Delivery Methods */
+
+
+/* fare una classe box con tutto? */
+
+#delivery_methods {
+    height: 90vh;
+}
+
+.box_format {
+    background-color: rgb(25, 25, 31);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#delivery_methods .standard_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#delivery_methods h3 {
+    color: #f0f3f0;
+    text-transform: capitalize;
+}
+
+#delivery_methods h2 {
+    color: white;
+}
+
+#delivery_methods p {
+    color: #acaeb1;
+}
+
+#delivery_methods i {
+    color: #038484;
+}
+
+#delivery_methods .standard_wrapper .first_row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+#delivery_methods .standard_wrapper .first_row .right_box {
+    width: 65%;
+    background-color: rgb(25, 25, 31);
+}
+
+#delivery_methods .standard_wrapper .first_row .left_box {
+    width: 20%;
+}
+
+#delivery_methods .standard_wrapper .second_row .left_box,
+#delivery_methods .standard_wrapper .second_row .center_box,
+#delivery_methods .standard_wrapper .second_row .right_box {
+    width: 30%;
+}
+
+#delivery_methods .standard_wrapper .second_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#delivery_methods .icon_row .big_font {
+    padding-bottom: 20px;
 }
