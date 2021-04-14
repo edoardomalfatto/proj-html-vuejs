@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>NexGen Delivery</title>
 </head>
 
@@ -39,28 +40,20 @@
 
         <section id="bottom_header_jumbotron">
             <div class="standard_wrapper">
-                <section class="bottom_header">
+                <section class="bottom_header" id="root">
                     <div class="bottom_header_left">
-                        <div class="logo"><img src="img/logo.svg" alt="NexGen Logo"></div>
+                        <div class="logo"><img :src=header.logo.src :alt=header.logo.alt></div>
 
                     </div>
                     <div class="bottom_header_right">
                         <ul class="list_none">
-                            <li>
-                                <a href="#"><span>Home</span></a>
+                            <li v-for="link in header.links">
+                                <a href="#"><span>{{link}}</span></a>
                             </li>
-                            <li>
-                                <a href="#"><Span>Services</Span></a>
-                            </li>
-                            <li>
-                                <a href="#"><Span>About</Span></a>
-                            </li>
-                            <li>
-                                <a href="#"><Span>Pricing</Span></a>
-                            </li>
-                            <li><a href="#"><i class="far fa-user"></i></a></li>
-                            <li>
-                                <a class="btn" id="green_btn" href="#">Get In Touch</a>
+                            <li v-for="icon in header.icons"><a :href=icon.href><i :class=icon.class></i></a></li>
+
+                            <li v-for="(button,name) in header.buttons">
+                                <a :id=button.id :class=button.class :href=button.href>{{button.title}}</a>
                             </li>
 
                         </ul>
@@ -206,7 +199,7 @@
 
                         </div>
                     </div>
-                    <div class="footer_right">
+                    <div class="footer_right" id="root">
                         <div class="footer_right_information">
                             <h3>Example Inc.</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
@@ -215,8 +208,8 @@
                         </div>
                         <div class="footer_right_information_data">
                             <ul class="list_none">
-                                <li>
-                                    <a href="#"><i class="medium_font fas fa-phone-alt"></i>+1(305) 1234-5678</a>
+                                <li v-for="contact in footer.contacts">
+                                    <a href="#"><i :class=(contact.iconPrefix)+(contact.iconClass)></i>+1(305) 1234-5678</a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="medium_font fas fa-envelope"></i> hello@example.com</a>
@@ -249,6 +242,7 @@
     </footer>
 
     <!-- FINE FOOTER -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
