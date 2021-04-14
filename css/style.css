@@ -96,6 +96,14 @@ a.special {
     color: #28363c;
 }
 
+mark {
+    display: inline-block;
+    border-radius: 5px;
+    line-height: 0em;
+    padding-bottom: 0.5em;
+    background-color: #03848441;
+}
+
 
 /* background colors */
 
@@ -252,9 +260,12 @@ span.section_exp {
     text-transform: capitalize;
 }
 
-#delivery_methods h2 {
+#delivery_methods h2,
+#delivery_methods mark {
     color: white;
 }
+
+#delivery_methods mark {}
 
 #delivery_methods p {
     color: #acaeb1;
@@ -308,7 +319,8 @@ span.section_exp {
     width: 40%;
 }
 
-#identity .identity_description>* {
+#identity .identity_description>*,
+#pricing_table .pricing_table_description>* {
     padding-bottom: 20px;
 }
 
@@ -320,6 +332,14 @@ span.section_exp {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+
+/* Quarta sezione - Pricing Table */
+
+#pricing_table {
+    height: 120vh;
+    background-color: rgb(238, 244, 237);
 }
 
 
