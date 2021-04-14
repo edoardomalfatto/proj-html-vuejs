@@ -17,19 +17,17 @@
         <!-- Prima sezione top header con orari di apertura -->
 
         <section id="top_header" class="bkg_outerspace fnt_bombaygray">
-            <div class="standard_wrapper">
+            <div class="standard_wrapper" id="vue_firstheader">
                 <div class="top_header_left">
                     <span><i class="fas fa-clock"></i> Open Hours: Mon - Sat - 9:00 - 18:00</span>
                 </div>
                 <div class="top_header_right">
-                    <span><i class="fas fa-phone-alt"></i> +1 (305) 1234-5678</span>
-                    <span><i class="fas fa-envelope"></i> hello@example.com</span>
+                    <span v-for="contact in footer.contacts"><i :class="getIcon(contact)"></i> {{contact.title}}</span>
 
                     <div class="top_header_icon_nav">
                         <ul class="list_none">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li v-for="social in footer.socialContacts"><a :href=social.link><i :class="getIcon(social)"></i></a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -40,7 +38,7 @@
 
         <section id="bottom_header_jumbotron">
             <div class="standard_wrapper">
-                <section class="bottom_header" id="root">
+                <section class="bottom_header" id="vue_header">
                     <div class="bottom_header_left">
                         <div class="logo"><img :src=header.logo.src :alt=header.logo.alt></div>
 
@@ -199,27 +197,26 @@
 
                         </div>
                     </div>
-                    <div class="footer_right" id="root">
+                    <div class="footer_right" id="vue_footer">
                         <div class="footer_right_information">
-                            <h3>Example Inc.</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <h3>{{footer.inc.title}}</h3>
+                            <p v-for="description in footer.inc.descriptions">{{description}} </p>
 
                         </div>
                         <div class="footer_right_information_data">
                             <ul class="list_none">
                                 <li v-for="contact in footer.contacts">
-                                    <a href="#"><i :class=(contact.iconPrefix)+(contact.iconClass)></i>+1(305) 1234-5678</a>
+                                    <a href="#"><i :class="getIcon(contact)" class="medium_font"></i>{{contact.title}}</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#"><i class="medium_font fas fa-envelope"></i> hello@example.com</a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="medium_font fas fa-map-marker-alt"></i> Main Avenue, 987</a>
-                                </li>
+                                </li> -->
                             </ul>
                             <div class="infomation_btn">
-                                <a class="btn" id="transparent_btn" href="#">View Map</a>
+                                <a v-for="button in footer.buttons" :class="button.class" :id="button.id" :href=footer.contacts.location.btnHref>{{button.title}}</a>
 
                             </div>
                         </div>
