@@ -18,7 +18,7 @@
 
         <!-- Prima sezione top header con orari di apertura -->
 
-        <section id="top_header" class="bkg_outerspace fnt_bombaygray">
+        <section id="top_header" class="bkg_outerspace fnt_othergray">
             <div class="standard_wrapper" id="vue_firstheader">
                 <div class="top_header_left">
                     <span><i class="fas fa-clock"></i> Open Hours: Mon - Sat - 9:00 - 18:00</span>
@@ -269,7 +269,7 @@
             <div class="standard_wrapper">
                 <div class="why_choose_description">
                     <h1>Why choose <mark class="green_underline">Us?</mark></h1>
-                    <p class="special">We work intensively in search of ideals that can add up in the lives of our costumers. This is what motivates us to improve every day.</p>
+                    <p class="special_light">We work intensively in search of ideals that can add up in the lives of our costumers. This is what motivates us to improve every day.</p>
 
                     <div class="why_choose_button">
                         <a class="btn" id="green_btn" href="#">Get in Touch</a>
@@ -321,7 +321,7 @@
                     <div class="footer_right" id="vue_footer">
                         <div class="footer_right_information">
                             <h3 class="fnt_outerspace">{{footer.inc.title}}</h3>
-                            <p v-for="description in footer.inc.descriptions">{{description}} </p>
+                            <p class="fnt_bombaygray" v-for="description in footer.inc.descriptions">{{description}} </p>
 
                         </div>
                         <div class="footer_right_information_data">
@@ -329,12 +329,7 @@
                                 <li v-for="contact in footer.contacts">
                                     <a href="#"><i :class="getIcon(contact)" class="medium_font"></i>{{contact.title}}</a>
                                 </li>
-                                <!-- <li>
-                                    <a href="#"><i class="medium_font fas fa-envelope"></i> hello@example.com</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="medium_font fas fa-map-marker-alt"></i> Main Avenue, 987</a>
-                                </li> -->
+
                             </ul>
                             <div class="infomation_btn">
                                 <a v-for="button in footer.buttons" :class="button.class" :id="button.id" :href=footer.contacts.location.btnHref>{{button.title}}</a>

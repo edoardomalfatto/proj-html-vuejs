@@ -95,8 +95,12 @@ a.special {
 
 /* font colors */
 
-.fnt_bombaygray {
+.fnt_othergray {
     color: #acaeb1;
+}
+
+.fnt_bombaygray {
+    color: #696b6c;
 }
 
 .fnt_outerspace {
@@ -125,6 +129,10 @@ mark.green_full {
 }
 
 p.special {
+    color: #696b6c;
+}
+
+p.special_light {
     color: #acaeb1;
 }
 
@@ -208,7 +216,7 @@ body {
 /* bottom header */
 
 #bottom_header_jumbotron {
-    height: 100vh;
+    height: 96vh;
     background-image: url(../img/bg-13.jpg);
     background-position: right;
     background-repeat: no-repeat;
@@ -233,7 +241,7 @@ body {
 }
 
 .bottom_header_left .logo img {
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .bottom_header_right ul {
