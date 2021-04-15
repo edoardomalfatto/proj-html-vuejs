@@ -39,9 +39,8 @@
 
 .btn {
     text-transform: uppercase;
-    padding: 15px 22px;
+    padding: 10px 25px;
     border-radius: 3px;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -68,7 +67,7 @@ h2 {
 }
 
 h3 {
-    font-size: 120%;
+    font-size: 140%;
     padding-bottom: 20px;
 }
 
@@ -83,6 +82,10 @@ a.special {
 
 .big_font {
     font-size: 200%;
+}
+
+.xxl_font {
+    font-size: 330%;
 }
 
 .medium_font {
@@ -100,12 +103,25 @@ a.special {
     color: #28363c;
 }
 
+.fnt_green {
+    color: #038484;
+}
+
 mark {
     display: inline-block;
     border-radius: 5px;
     line-height: 0em;
     padding-bottom: 0.5em;
     background-color: #03848441;
+}
+
+mark.green_underline {
+    background-color: #038484;
+}
+
+mark.green_full {
+    padding: 0 25px;
+    line-height: normal;
 }
 
 p.special {
@@ -137,6 +153,10 @@ p.special {
 
 
 /* EFFECTVIE CODE */
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
 
 
 /* HEADER */
@@ -222,7 +242,6 @@ p.special {
 
 .bottom_header_right ul li a {
     text-decoration: none;
-    font-weight: bold;
     text-transform: uppercase;
     color: #28363c;
 }
@@ -277,7 +296,8 @@ span.section_exp {
 
 #delivery_methods h2,
 #delivery_methods mark,
-#why_choose h1 {
+#why_choose h1,
+#why_choose mark {
     color: white;
 }
 
