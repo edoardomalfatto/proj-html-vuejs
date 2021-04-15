@@ -21,6 +21,10 @@
     float: right;
 }
 
+.align_center {
+    text-align: center;
+}
+
 
 /* standard divs */
 
@@ -117,6 +121,14 @@ mark {
 
 .bkg_darkbunker {
     background-color: #141b1e;
+}
+
+.bkg_dark_box_format {
+    background-color: rgb(25, 25, 31);
+}
+
+.bkg_light_box_format {
+    background-color: white;
 }
 
 
@@ -244,7 +256,6 @@ span.section_exp {
 }
 
 .box_format {
-    background-color: rgb(25, 25, 31);
     padding: 40px;
     border-radius: 10px;
 }
@@ -283,7 +294,6 @@ span.section_exp {
 
 #delivery_methods .standard_wrapper .first_row .right_box {
     width: 65%;
-    background-color: rgb(25, 25, 31);
 }
 
 #delivery_methods .standard_wrapper .first_row .left_box {
@@ -337,9 +347,113 @@ span.section_exp {
 
 /* Quarta sezione - Pricing Table */
 
+#pricing_table .main_table .first_row .m_popular {
+    padding: 60px 40px;
+    position: relative;
+}
+
+#pricing_table .main_table .first_row .m_popular::after {
+    display: flex;
+    align-items: center;
+    content: "Most Popular";
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding-left: 10px;
+    background: #439f9e;
+    color: white;
+}
+
+#pricing_table .main_table .first_row .m_popular .circlelabel {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 33px;
+    background: #439f9e;
+    color: white;
+}
+
+#pricing_table .main_table .first_row .n_popular {
+    margin: 20px 0;
+}
+
 #pricing_table {
     height: 120vh;
     background-color: rgb(238, 244, 237);
+}
+
+#pricing_table .standard_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pricing_table .standard_wrapper .pricing_table_description p {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#pricing_table .main_table h2 span {
+    font-size: 50%;
+    font-weight: normal;
+}
+
+#pricing_table .main_table .first_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#pricing_table .main_table .first_row i {
+    color: #038484;
+}
+
+#pricing_table .main_table .first_row .left_box,
+#pricing_table .main_table .first_row .center_box,
+#pricing_table .main_table .first_row .right_box {
+    width: 30%;
+}
+
+#pricing_table .main_table .first_row .icon_row {
+    padding-bottom: 10px;
+}
+
+#pricing_table .main_table .first_row .left_box .pricing_row,
+#pricing_table .main_table .first_row .center_box .pricing_row,
+#pricing_table .main_table .first_row .right_box .pricing_row {
+    color: #038484;
+    padding-bottom: 20px;
+}
+
+#pricing_table .main_table .first_row .left_box .table_row li,
+#pricing_table .main_table .first_row .center_box .table_row li,
+#pricing_table .main_table .first_row .right_box .table_row li {
+    padding-bottom: 20px;
+}
+
+#pricing_table .main_table .first_row .left_box .table_row li.active p::after,
+#pricing_table .main_table .first_row .center_box .table_row li.active p::after,
+#pricing_table .main_table .first_row .right_box .table_row li.active p::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    float: right;
+    vertical-align: middle;
+    color: #038484;
+}
+
+#pricing_table .main_table .first_row .left_box .table_row li.inactive p::after,
+#pricing_table .main_table .first_row .right_box .table_row li.inactive p::after,
+#pricing_table .main_table .first_row .center_box .table_row li.inactive p::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    float: right;
+    vertical-align: middle;
+    color: #038484;
 }
 
 
