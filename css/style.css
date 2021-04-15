@@ -108,6 +108,10 @@ mark {
     background-color: #03848441;
 }
 
+p.special {
+    color: #acaeb1;
+}
+
 
 /* background colors */
 
@@ -272,7 +276,8 @@ span.section_exp {
 }
 
 #delivery_methods h2,
-#delivery_methods mark {
+#delivery_methods mark,
+#why_choose h1 {
     color: white;
 }
 
@@ -319,7 +324,7 @@ span.section_exp {
 /* Terza sezione - Identity */
 
 #identity {
-    height: 100vh;
+    height: 90vh;
     background-image: url(../img/bg-6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -330,11 +335,13 @@ span.section_exp {
 }
 
 #identity .identity_description>*,
-#pricing_table .pricing_table_description>* {
+#pricing_table .pricing_table_description>*,
+#why_choose .why_choose_description>* {
     padding-bottom: 20px;
 }
 
-#identity .identity_button {
+#identity .identity_button,
+#why_choose .why_choose_button {
     margin-top: 30px;
 }
 
@@ -382,7 +389,7 @@ span.section_exp {
 }
 
 #pricing_table {
-    height: 120vh;
+    height: 90vh;
     background-color: rgb(238, 244, 237);
 }
 
@@ -454,6 +461,29 @@ span.section_exp {
     float: right;
     vertical-align: middle;
     color: #038484;
+}
+
+
+/*Quinta sezione - Why Choose */
+
+#why_choose {
+    height: 90vh;
+    background-image: url(../img/bg-7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#why_choose .standard_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#why_choose .standard_wrapper .why_choose_description {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 
